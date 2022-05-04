@@ -1,15 +1,19 @@
 <template>
     <h2>Esta é a descrição da pessoa: {{nome}} </h2>
-    <p> Estou trabalhando no momento</p>
-    <p>Utilizo as seguintes tecnologias: </p>
-    <ul>
-        <li></li>
-    </ul>
+    <Info/>
+    <Info/> 
 </template>
 
 <script>
+// APP > PESSOA > INFO - HIERARQUIA
+
+import Info from './Info.vue'
+
     export default {
         name: 'PessoaP',
+        components:{
+            Info
+        },
         data(){
             return{
                 nome: 'Zezim'
@@ -17,3 +21,4 @@
         }
     }
 </script>
+
