@@ -18,7 +18,7 @@ export default{
   components: {
     PrimeiroComponente,
     LifeCycle,
-    Pessoa
+    Pessoa,
   },
     data(){
       return{
