@@ -1,7 +1,7 @@
 <template>
   <div>
     <PrimeiroComponente />
-    <p> O dado de app é: {{testando}}</p>
+    <p class="paragrafo-pai"> O dado de app é: {{testando}}</p>
     <LifeCycle/>
     <Pessoa/>
   </div>
@@ -27,4 +27,16 @@ export default{
   }
 }
 </script>
+
+<style>
+
+  body {
+    background-color: rgb(75, 75, 75);
+    color: bisque;
+  }
+
+  a {
+    color: rgb(184, 38, 38);
+  }
+</style>
 

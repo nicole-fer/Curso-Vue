@@ -45,3 +45,9 @@ import Picture from './Picture.vue'
         }
     }
 </script>
+
+<style>
+    .paragrafo-pai{
+        color: crimson;
+    }
+</style>
