@@ -8,6 +8,9 @@
             <li>PHP</li>
             <li>Python</li>
         </ul>
+        <div>
+            <button @click="showEmail">{{textoBotao}}</button>
+        </div>
         <p v-show="mostrar_email">Mande uma mensagem para: {{email}}</p>
         <p>Para acessar meu portifólio <a v-bind:href='meu_link' target="_blank">  basta clicar aqui</a></p>
         <Picture/>
@@ -24,9 +27,20 @@ import Picture from './Picture.vue'
         data() {
             return{
                 esta_trabalhando: false,
-                mostrar_email: true,
+                mostrar_email: false,
                 email: 'nicolefernandesfm@gmail.com',
-                meu_link: 'https://github.com/nicole-fer/Curso-Vue'
+                meu_link: 'https://github.com/nicole-fer/Curso-Vue',
+                textoBotao: 'Mostrar E-Mail'
+            }
+        },
+        methods: {
+            showEmail(){
+                this.mostrar_email = !this.mostrar_email
+                if(!this.mostrar_email){
+                    this.textoBotao = 'Mostrar E-Mail'
+                } else {
+                    this.textoBotao = 'Esconder E-Mail'
+                }
             }
         }
     }
