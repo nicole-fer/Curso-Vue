@@ -8,11 +8,11 @@
 <script>
     export default {
         name: 'MultiplosEventos',
-        txt1: 'Primeiro Evento',
-        txt2: 'Segundo Evento',
         data() {
             return {
-                multiplos_eventos: ''
+                multiplos_eventos: '',
+                txt1: 'Primeiro Evento',
+                txt2: 'Segundo Evento',
             }
         },
         // ativa dois metodos com apenas um evento, no primeiro, ao clicar no botão, aparece a frase "Primeiro Evento Ativado" e no segundo substitui a primeira fase pela segunda após meio segundo
