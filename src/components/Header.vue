@@ -11,12 +11,17 @@
         <li>
             <a href="#"> Contatos</a>
         </li>
+
+        <li>
+            <a v-if="esta_logado" href="#"> Meu Perfil</a>
+        </li>
     </ul>
 </template>
 
 <script>
     export default {
-        name:'HeadeR'
+        name:'HeadeR',
+        props: ["esta_logado"]
     }
 </script>
 
