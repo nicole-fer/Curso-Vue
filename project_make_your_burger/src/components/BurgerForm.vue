@@ -12,24 +12,24 @@
                     <label for="pao">Escolha o Pão: </label>
                     <select name="pao" id="pao" v-model="pao">
                         <option value="">Selecione o Seu Pão</option>
-                        <option value="integral">Integral</option>
+                        <option v-for="pao in paes" :key="pao.id" :value="pao.tipo">{{pao.tipo}}</option>
                     </select>
                 </div>
 
-                <div id="opcionais-container" class="input-container">
+                <div class="input-container">
                     <label for="carne">Escolha a Carne do seu Burger: </label>
                     <select name="carne" id="carne" v-model="pao">
                         <option value="">Selecione o tipo de Carne</option>
-                        <option value="maminha">Maminha</option>
+                        <option v-for="carne in carnes" :key="carne.id" value="maminha">{{carne.tipo}}</option>
                     </select>
                 </div>
 
                 
-                <div class="input-container">
+                <div id="opcionais-container" class="input-container">
                     <label id="opcionais-title" for="opcionais">Selecione os opcionais: </label>
-                        <div class="checkbox-container">
-                            <input type="checkbox" name="opcionais" v-model="opcionais" value="salame">
-                            <span>Salame</span>
+                        <div class="checkbox-container" v-for="opcional in opcionais" :key="opcional.id">
+                            <input type="checkbox" name="opcionais" v-model="opcionais" :value="opcional.tipo">
+                            <span>{{opcional.tipo}}</span>
                         </div>
                 </div>
 
@@ -43,7 +43,33 @@
 
 <script>
     export default {
-        name: "BurgerFormComponent"
+        name: "BurgerFormComponent",
+        data (){
+            return{
+                paes: null,
+                carnes: null,
+                opcionaisdata: null,
+                nome: null,
+                pao: null,
+                carne: null,
+                opcionais: [],
+                status: "Solicitado",
+                msg: null,
+            }
+        },
+        methods: {
+            async getIngredientes() {
+                const req = await fetch("http://localhost:3000/ingredientes")
+                const data = await req.json();
+
+                this.paes = data.paes
+                this.carnes = data.carnes
+                this.opcionais = data.opcionais
+            }
+        },
+        mounted() {
+            this.getIngredientes()
+        }
     }
 </script>
 
