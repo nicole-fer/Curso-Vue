@@ -94,6 +94,12 @@ import Message from "./Message.vue"
                 this.msg = `Pedido N° ${res.id} Realizado com Sucesso`
                 setTimeout(() => this.msg = "", 3000)
 
+                // limpar os campos
+                this.nome = ""
+                this.carne = ""
+                this.pao = ""
+                this.opcionais = ""
+
             }
         },
         mounted() {
