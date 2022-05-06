@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="main-conteiner">
       <h1>PEDIDOS</h1>
   </div>
 </template>
@@ -8,5 +8,6 @@
     export default {
         name: 'PedidosComponent'
     }
+
 </script>
 

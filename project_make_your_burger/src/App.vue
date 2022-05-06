@@ -30,4 +30,17 @@ import Footer from "./components/Footer.vue"
     margin: 0;
     box-sizing: border-box;
   }
+
+  .main-conteiner{
+    margin: 50px;
+    min-height: 250px;    /* Joga o footer pra baixo */ 
+
+  }
+
+  h1{
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 30px;
+    color: #222;
+  }
 </style>

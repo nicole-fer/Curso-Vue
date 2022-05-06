@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="main-conteiner">
     <h1>HOME</h1>
   </div>
 </template>
