@@ -90,7 +90,7 @@ import Message from "./Message.vue"
 
                 const res = await req.json()
 
-                // componente de mensagem, some apos 3s
+                // coloca uma mensagem no sistema e limpa apos 3s
                 this.msg = `Pedido N° ${res.id} Realizado com Sucesso`
                 setTimeout(() => this.msg = "", 3000)
 
