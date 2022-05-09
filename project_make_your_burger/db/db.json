@@ -98,7 +98,7 @@
         "Salame",
         "Cebola roxa"
       ],
-      "status": "Solicitado",
+      "status": "Em produção",
       "id": 4
     },
     {
@@ -113,15 +113,15 @@
       "id": 8
     },
     {
-      "nome": "Maria",
+      "nome": "Julio",
       "carne": "maminha",
-      "pao": "Italiano Branco",
+      "pao": "3 Queijos",
       "opcionais": [
         "Bacon",
-        "Salame"
+        "Cheddar"
       ],
       "status": "Solicitado",
-      "id": 9
+      "id": 10
     }
   ]
 }
